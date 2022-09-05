@@ -1,0 +1,28 @@
+@use "global-vars" as global;
+
+$media-max-width-point: 980px;
+
+.section.section_brains {
+    padding-left: 13.3vw;
+}
+
+.section__brains-img {
+    width: 57%;
+
+    @media (max-width: $media-max-width-point) {
+        display: none;
+    }
+}
+
+.section__brains-box {
+    padding-left: min(3.54vw, 68px);
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $media-max-width-point) {
+        padding-left: unset;
+        width: unset;
+        text-align: center;
+    }
+}

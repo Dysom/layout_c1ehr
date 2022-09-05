@@ -1,0 +1,33 @@
+@use "global-vars" as global;
+
+$media-max-width-point: 980px;
+$media-max-width-point-2: 320px;
+
+.section_clients-say {}
+
+.section__clients-say-img {
+    width: 56%;
+
+    @media (max-width: $media-max-width-point) {
+        display: none;
+    }
+}
+
+.section__clients-say-box {
+    padding-right: 45px;
+    width: 44%;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $media-max-width-point) {
+        padding-right: unset;
+        width: unset;
+        text-align: center;
+    }
+}
+
+.section__title.section__title_mod-clients-say {
+    @media (max-width: $media-max-width-point-2) {
+        font-size: 34px;
+    }
+}

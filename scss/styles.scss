@@ -1,0 +1,20 @@
+$debug: 0;
+
+@use "fonts";
+@use "common";
+@use "main-wrapper";
+@use "top-wrapper";
+@use "header";
+@use "security";
+@use "logotypes";
+@use "section";
+@use "brains";
+@use "ribbon";
+@use "clients-say";
+@use "footer";
+
+@if $debug == 1 {
+    .main-wrapper > *:not(.footer) {
+        display: none;
+    }
+}

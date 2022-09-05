@@ -1,0 +1,29 @@
+@use "global-vars" as global;
+
+$media-max-width-point: 1400px;
+$media-max-width-point-2: 420px;
+
+.logotypes {
+    padding: 20px calc(global.$side-indent / 4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $media-max-width-point) {
+        flex-wrap: wrap;
+    }
+
+    @media (max-width: $media-max-width-point-2) {
+        flex-direction: column;        
+    }
+}
+
+.logotypes__item {
+    margin: 20px 35.5px;    
+}
+
+.logotypes__item > img {
+    @media (max-width: $media-max-width-point-2) {
+        width: 100%;
+    }
+}

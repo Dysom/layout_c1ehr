@@ -1,0 +1,6 @@
+@use "global-vars" as global;
+
+.main-wrapper {
+    margin: 0 auto;
+    max-width: global.$layout-width;  
+}

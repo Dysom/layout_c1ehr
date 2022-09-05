@@ -1,0 +1,24 @@
+@use "global-vars" as global;
+
+.top-wrapper {
+    position: relative;
+    min-height: 1030px;
+}
+
+.top-wrapper > *:not(.top-wrapper__substrate) {
+    position: relative;
+    z-index: 11002;
+}
+
+.top-wrapper__substrate {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    z-index: 11001;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -41.9%, rgba(255, 255, 255, 0.4) 260.24%);
+    opacity: 0.1;
+    backdrop-filter: blur(200px);
+    border-radius: 10px;
+}

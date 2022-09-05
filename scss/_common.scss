@@ -1,0 +1,41 @@
+@use "global-vars" as global;
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+body {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Tahoma';
+    background-color: global.$bg-color;
+}
+
+.button {
+    padding: 15px 30px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.375em;
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: global.$button-bg-color;
+    border-radius: 5px;
+}
+
+.button-bt {
+    @extend .button;
+    font-size: 20px;
+    line-height: 1.35em;
+}
+
+.button-bt__img-polygon {
+    margin-bottom: -5px;
+    margin-right: 5px;
+}

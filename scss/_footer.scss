@@ -1,0 +1,209 @@
+@use "global-vars" as global;
+
+$media-max-width-point: 1080px;
+$media-max-width-point-2: 680px;
+
+.footer {
+    padding: 77px calc(global.$side-indent/4);
+    position: relative;
+}
+
+.footer__substrate {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 11201;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -41.9%, #FFFFFF 260.24%);
+    opacity: 0.05;
+    backdrop-filter: blur(200px);
+    border-radius: 10px;
+}
+
+.footer__wrapper {
+    margin: 0 auto;
+    padding-left: 36px;
+    padding-right: 29px;
+    max-width: 1146px;
+    position: relative;
+    z-index: 11202;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $media-max-width-point) {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    @media (max-width: $media-max-width-point-2) {
+        flex-flow: column;
+        flex-basis: unset;
+    }
+}
+
+.footer__column {    
+    padding-top: 23px;
+    padding-right: 32px;
+    flex-basis: 17.5%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+
+    @media (max-width: $media-max-width-point) {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+
+    @media (max-width: $media-max-width-point-2) {
+        margin-bottom: 20px;
+    }
+}
+
+.footer__column_central {
+    @media (max-width: $media-max-width-point) {
+        margin-bottom: 20px;
+        order: -1;
+        flex-basis: 33.3%;
+    }
+
+    @media (max-width: $media-max-width-point-2) {
+        flex-basis: unset;
+        order: unset;
+    }
+}
+
+.footer__column_left {
+    flex-basis: 26.4%;
+}
+
+.footer__column_right {
+    flex-basis: 21.1%;
+}
+
+.footer__logo {
+    margin-top: -23px;
+    margin-bottom: 7px;
+}
+
+.footer__logo-text {
+    margin-bottom: 10px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.375em;
+    color: global.$button-bg-color;
+    text-decoration: none;
+}
+
+.footer__text {
+    margin-bottom: 29px;
+    font-family: 'Circular Std';
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 1.286em;
+    color: global.$text-color;
+    opacity: 0.6;
+}
+
+.footer__address {
+    margin-bottom: 20px;
+    padding-left: 22px;
+    text-indent: -22px;
+    display: block;
+    font-family: 'Circular Std';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.285em;
+    color: global.$text-color;
+    text-decoration: none;
+    transition: opacity .4s ease;
+
+    @media (max-width: $media-max-width-point-2) {
+        padding-left: 0;
+        text-indent: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+a.footer__address:hover {
+    opacity: .6;
+}
+
+.footer__address-img {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.footer__title {
+    margin-bottom: 32px;
+    font-family: 'Circular Std';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.25em;
+    color: global.$text-color;
+}
+
+.footer__link {
+    margin-bottom: 20px;
+    font-family: 'Circular Std';
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 1.285em;
+    color: global.$text-color;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: opacity .4s ease;
+}
+
+.footer__link:hover {
+    opacity: 1;
+}
+
+.footer__bottom {
+    margin-top: auto;
+}
+
+.footer__socials {
+    margin-right: -25px;
+    margin-bottom: 33px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__social-link {
+    margin-bottom: 20px;
+    margin-right: 25px;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__lang {}
+
+.lang {}
+
+.lang__img {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.lang__select {
+    margin-bottom: 20px;
+    padding-right: 20px;
+    appearance: none;
+    font-family: 'Circular Std';
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 1.286em;
+    color: global.$text-color;
+    background-color: transparent;
+    background-image: url(../img/ico-check-mark.svg);
+    background-repeat: no-repeat;
+    background-position: right center;
+}

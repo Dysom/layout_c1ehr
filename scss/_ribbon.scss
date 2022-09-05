@@ -1,0 +1,108 @@
+@use "global-vars" as global;
+
+$media-max-width-point: 1280px;
+
+.ribbon {
+    padding: 40px 0;
+}
+
+.ribbon__cards-wrapper {
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $media-max-width-point) {
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.ribbon__card {
+    max-width: 362px;
+    flex-basis: 19%;
+
+    @media (max-width: $media-max-width-point) {
+        margin: 0 10px 20px;
+        flex-basis: unset;
+    }
+}
+
+.card {
+    padding: 30px;
+    position: relative;    
+    text-align: center;
+}
+
+.card > *:not(.card__substrate) {
+    position: relative;
+    z-index: 12002;
+}
+
+.card__substrate {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 12001;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) -41.9%, #FFFFFF 115.68%);
+    opacity: 0.1;
+    backdrop-filter: blur(200px);
+    border-radius: 10px;
+}
+
+.card__img-wrapper {
+    margin-bottom: 30px;
+    min-height: 103px;
+}
+
+.card__img {}
+
+.card__img_small {
+    margin-top: 16px;
+}
+
+.card__title {
+    margin-bottom: 30px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.25em;
+    color: global.$text-color;
+    opacity: 0.7;
+}
+
+.card__text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 15;
+
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6em;
+    color: global.$text-color;
+    opacity: 0.7;
+}
+
+.ribbon__tail {
+    display: flex;
+    justify-content: center;
+}
+
+.ribbon__round {
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    background: #2C3647;
+    backdrop-filter: blur(200px);
+    border-radius: 10px;
+    opacity: 0.5;
+}
+
+.ribbon__round.ribbon__round_active {
+    opacity: unset;
+}

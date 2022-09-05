@@ -1,0 +1,33 @@
+@use "global-vars" as global;
+
+.section {
+    padding: 130px global.$side-indent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section__title {
+    margin-bottom: 30px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.3em;
+    color: global.$text-color;
+}
+
+.section__text {
+    margin-bottom: 50px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.6em;
+    color: global.$text-color;
+    opacity: 0.7;
+}
+
+.section__text > p:not(:last-of-type) {
+    margin-bottom: 20px;
+}
+
+.section__buttons {}
